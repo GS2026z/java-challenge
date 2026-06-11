@@ -1,0 +1,10 @@
+# Compiled Java classes
+out/
+*.class
+
+# Claude Code project files
+.claude/
+CLAUDE.md
+
+# OS files
+.DS_Store
