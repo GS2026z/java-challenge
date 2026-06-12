@@ -35,7 +35,4 @@ javac -d out $(find src -name "*.java")
 java -cp out view.Main
 ```
 
-O programa já carrega um catálogo de produtos TOTVS e cria um usuário responsável de exemplo.
-O menu permite cadastrar clientes (1), cadastrar reuniões (2), registrar transcrições (3) e,
-a partir desses dados, executar análise (4), gerar insights (5) e consultar o histórico do
-cliente (6).
+
