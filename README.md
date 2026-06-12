@@ -1,7 +1,7 @@
 # TOTVS Meeting Intelligence — Projeto Java (DDD)
 
-Projeto Java referente à entrega "DDD-Java – Projeto Java (70 pontos)" do Challenge TOTVS 2026,
-implementado conforme a modelagem descrita em `Documentação DDD-Java.pdf`.
+Projeto Java do Challenge TOTVS 2026,
+
 
 ## Estrutura de pacotes
 
