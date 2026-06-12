@@ -22,7 +22,7 @@ Challenge TOTVS 2026 — Entrega DDD-Java (Domain Driven Design)
 
 ---
 
-<!-- Quebra de página aqui na versão final -->
+
 
 # Sumário
 

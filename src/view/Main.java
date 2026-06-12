@@ -90,7 +90,7 @@ public class Main {
         String titulo = lerTexto("Titulo da reuniao: ");
         String data = lerTexto("Data (dd/mm/aaaa): ");
 
-        Reuniao reuniao = new Reuniao(proximoIdReuniao++, data, titulo, responsavel, cliente);
+        Reuniao reuniao = new Reuniao(proximoIdReuniao++, data, titulo, responsavel.getNome(), cliente);
         reuniao.cadastrarReuniao();
 
         cliente.adicionarReuniao(reuniao);

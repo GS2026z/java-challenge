@@ -50,9 +50,7 @@ public class Cliente extends Pessoa {
         reunioes.add(reuniao);
     }
 
-    public void atualizarCadastro(String segmento, String porte) {
-        this.segmento = segmento;
-        this.porte = porte;
+    public void atualizarCadastro() {
         System.out.println("Cadastro do cliente " + getNome() + " atualizado com sucesso.");
     }
 

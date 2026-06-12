@@ -33,13 +33,15 @@ ecossistema de produtos TOTVS citados na conversa (Protheus, RM, Fluig, Datasul,
 A modelagem foi pensada para refletir o domínio de negócio com Orientação a Objetos e
 princípios de Domain Driven Design. A classe abstrata `Pessoa` concentra os atributos
 comuns a quem participa do processo (id e nome), sendo especializada em `Cliente` (com
-segmento, porte e o histórico de reuniões) e `UsuarioSistema` (o colaborador responsável
-pela reunião, com seu perfil de atuação). Cada `Reuniao` referencia o cliente, o
-responsável, sua `Transcricao` e o conjunto de `AnaliseIA` geradas a partir dela. A
-`AnaliseIA` carrega o sentimento geral e os scores de risco e oportunidade calculados pelo
-`AnaliseService`, além da lista de `Insight` produzidos pelo `InsightService` — cada
-insight podendo estar associado a um `ProdutoTotvs` do catálogo, o que viabiliza o
-mapeamento de ecossistema citado acima.
+segmento, porte e o histórico de reuniões) e `UsuarioSistema` (o colaborador do sistema,
+com seu perfil de atuação — usada para demonstrar herança e polimorfismo via
+`exibirDados()`). Cada `Reuniao` referencia o `Cliente` ao qual pertence, registra o nome
+do responsável pela condução da reunião e está associada à sua `Transcricao` e ao conjunto
+de `AnaliseIA` geradas a partir dela. A `AnaliseIA` carrega o sentimento geral e os scores
+de risco e oportunidade calculados pelo `AnaliseService` (a partir de uma análise de
+palavras-chave na transcrição), além da lista de `Insight` produzidos pelo
+`InsightService` — cada insight podendo estar associado a um `ProdutoTotvs` do catálogo,
+o que viabiliza o mapeamento de ecossistema citado acima.
 
 ## Aplicação no Negócio
 

@@ -4,6 +4,7 @@ import model.AnaliseIA;
 import model.Reuniao;
 import model.Transcricao;
 
+import java.text.Normalizer;
 import java.util.Locale;
 
 public class AnaliseService {
@@ -31,7 +32,7 @@ public class AnaliseService {
             throw new IllegalStateException("A reuniao nao possui transcricao registrada.");
         }
 
-        String texto = transcricao.getTextoBruto().toLowerCase(Locale.ROOT);
+        String texto = normalizar(transcricao.getTextoBruto());
 
         double scoreRisco = calcularScore(texto, PALAVRAS_RISCO);
         double scoreOportunidade = calcularScore(texto, PALAVRAS_OPORTUNIDADE);
@@ -42,6 +43,18 @@ public class AnaliseService {
         reuniao.adicionarAnalise(analise);
 
         return analise;
+    }
+
+    /**
+     * Remove acentos e cedilhas e converte para minusculas, para que palavras
+     * como "insatisfação" e "concorrência" possam ser comparadas com as
+     * palavras-chave (que estao escritas sem acento) e nao sejam quebradas
+     * pelo split de "\W+" (que trata letras acentuadas como separadores).
+     */
+    private String normalizar(String texto) {
+        String semAcentos = Normalizer.normalize(texto, Normalizer.Form.NFD)
+                .replaceAll("[\\p{InCombiningDiacriticalMarks}]", "");
+        return semAcentos.toLowerCase(Locale.ROOT);
     }
 
     private double calcularScore(String texto, String[] palavrasChave) {

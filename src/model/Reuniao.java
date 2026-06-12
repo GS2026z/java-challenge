@@ -8,12 +8,12 @@ public class Reuniao {
     private int idReuniao;
     private String data;
     private String titulo;
-    private UsuarioSistema responsavel;
+    private String responsavel;
     private Cliente cliente;
     private Transcricao transcricao;
     private List<AnaliseIA> analises;
 
-    public Reuniao(int idReuniao, String data, String titulo, UsuarioSistema responsavel, Cliente cliente) {
+    public Reuniao(int idReuniao, String data, String titulo, String responsavel, Cliente cliente) {
         this.idReuniao = idReuniao;
         this.data = data;
         this.titulo = titulo;
@@ -46,11 +46,11 @@ public class Reuniao {
         this.titulo = titulo;
     }
 
-    public UsuarioSistema getResponsavel() {
+    public String getResponsavel() {
         return responsavel;
     }
 
-    public void setResponsavel(UsuarioSistema responsavel) {
+    public void setResponsavel(String responsavel) {
         this.responsavel = responsavel;
     }
 
@@ -86,7 +86,7 @@ public class Reuniao {
         System.out.println("----- Reuniao #" + idReuniao + " -----");
         System.out.println("Titulo......: " + titulo);
         System.out.println("Data........: " + data);
-        System.out.println("Responsavel.: " + responsavel.getNome());
+        System.out.println("Responsavel.: " + responsavel);
         System.out.println("Cliente.....: " + cliente.getNome());
         System.out.println("Transcricao.: " + (transcricao != null ? "Registrada" : "Nao registrada"));
         System.out.println("Analises....: " + analises.size());
