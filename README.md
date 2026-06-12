@@ -1,5 +1,13 @@
 # TOTVS Meeting Intelligence — Projeto Java (DDD)
 
+## Integrantes do Grupo: 
+
+• RM 563995 — Azor Biagioni Tartuce
+• RM 562077 — João Pedro Ribeiro Palermo
+• RM 561872 — Enzo Hort Ramos
+• RM 562169 — Eduardo Santa Rosa Tolenti
+• RM 562334— Mateus Amaral Franze
+
 Projeto Java do Challenge TOTVS 2026,
 
 
